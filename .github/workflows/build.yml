@@ -18,8 +18,9 @@ jobs:
 
       # 1. 配置 Rust 环境，并明确添加 wasm32 目标
       - name: Setup Rust toolchain
-        uses: dtolnay/rust-toolchain@nightly
+        uses: dtolnay/rust-toolchain@stable
         with:
+          toolchain: nightly-2026-03-15
           targets: wasm32-unknown-unknown
 
       # 2. 缓存 Cargo (加快后续构建)
