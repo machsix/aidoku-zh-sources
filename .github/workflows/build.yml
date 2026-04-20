@@ -24,15 +24,9 @@ jobs:
 
       # 2. 缓存 Cargo (加快后续构建)
       - name: Cache Cargo registry
-        uses: actions/cache@v3
+        uses: Swatinem/rust-cache@v2
         with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            target
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
+          workspaces: "src/rust -> target"
 
       # 3. 安装 aidoku-cli 工具 (这是修复 "aidoku: command not found" 的关键)
       - name: Install aidoku-cli
