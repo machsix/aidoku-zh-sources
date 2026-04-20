@@ -29,11 +29,12 @@ jobs:
         with:
           workspaces: "src/rust -> target"
 
-      # 3. 安装 aidoku-cli 工具 (这是修复 "aidoku: command not found" 的关键)
+      # 3. 安装 aidoku-cli 工具 (使用预编译二进制，比从源码编译更快)
       - name: Install aidoku-cli
         run: |
-          # 从官方最新的 aidoku-rs 仓库安装 cli 工具
-          cargo install --git https://github.com/Aidoku/aidoku-rs --rev 59788187 aidoku-cli
+          chmod +x install-aidoku-cli.sh
+          AIDOKU_CLI_INSTALL_DIR="${HOME}/.local/bin" ./install-aidoku-cli.sh
+          echo "${HOME}/.local/bin" >> $GITHUB_PATH
 
       # 4. 执行构建脚本
       - name: Build Sources

@@ -4,9 +4,16 @@ Aidoku 中文图源
 
 ## 如何使用
 
-点击 [这里](https://aidoku.app/add-source-list/?url=https://raw.githubusercontent.com/suiyuran/aidoku-zh-sources/main/public/) 将图源添加到 Aidoku 中。
+点击下方链接将图源添加到 Aidoku 中：
 
-如果添加不了，可以点击 [这里](https://aidoku.app/add-source-list/?url=https://cdn.jsdelivr.net/gh/suiyuran/aidoku-zh-sources@main/public/) 试试。
+- **GitHub Pages (推荐)**: [添加图源](https://aidoku.app/add-source-list/?url=https://machsix.github.io/aidoku-zh-sources/)
+  - 直接访问索引文件: https://machsix.github.io/aidoku-zh-sources/index.json
+
+- **备用方案 (Raw GitHub)**: [添加图源](https://aidoku.app/add-source-list/?url=https://raw.githubusercontent.com/machsix/aidoku-zh-sources/gh-pages/)
+  - 直接访问索引文件: https://raw.githubusercontent.com/machsix/aidoku-zh-sources/gh-pages/index.json
+
+- **备用方案 (JSDelivr CDN)**: [添加图源](https://aidoku.app/add-source-list/?url=https://cdn.jsdelivr.net/gh/machsix/aidoku-zh-sources@gh-pages/)
+  - 直接访问索引文件: https://cdn.jsdelivr.net/gh/machsix/aidoku-zh-sources@gh-pages/index.json
 
 ## 图源列表
 
