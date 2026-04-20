@@ -18,7 +18,7 @@ jobs:
 
       # 1. 配置 Rust 环境，并明确添加 wasm32 目标
       - name: Setup Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@nightly
         with:
           targets: wasm32-unknown-unknown
 
@@ -32,7 +32,7 @@ jobs:
       - name: Install aidoku-cli
         run: |
           # 从官方最新的 aidoku-rs 仓库安装 cli 工具
-          cargo install --git https://github.com/Aidoku/aidoku-rs aidoku-cli
+          cargo install --git https://github.com/Aidoku/aidoku-rs --rev 59788187 aidoku-cli
 
       # 4. 执行构建脚本
       - name: Build Sources
